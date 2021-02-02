@@ -1,0 +1,24 @@
+<div class="formContainer">
+    <form [formGroup]="createServiceForm">
+        <div class="form-group">
+            <label>Identificación del técnico</label>
+            <input type="text" class="form-control" formControlName="techId">
+        </div>
+        <div class="form-group">
+            <label>Tipo de servicio</label>
+            <input type="text" class="form-control" formControlName="serviceId">
+        </div>
+
+        <div class="form-group">
+            <label>Fecha y hora de inicio del servicio</label>
+            <input type="datetime-local" class="form-control" formControlName="startDate">
+        </div>
+
+        <div class="form-group">
+            <label>Fecha y hora de fin del servicio</label>
+            <input type="datetime-local" class="form-control" formControlName="endDate">
+        </div>
+        <button class="btn btn-primary" (click)="setService()">Guardar servicio</button>
+    </form>
+
+</div>

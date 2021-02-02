@@ -1,0 +1,24 @@
+<div class="formContainer">
+    <form [formGroup]="consultForm">
+        <div class="form-group">
+            <label>Identificación del técnico</label>
+            <input type="text" class="form-control" formControlName="technicialId">
+        </div>
+        <div class="form-group">
+            <label>Número de semana del año</label>
+            <input type="number" class="form-control" formControlName="weekNumber">
+        </div>
+        <button class="btn btn-primary" (click)="consultWork()">Consultar</button>
+    </form>
+
+
+    <div *ngIf="showResults">
+        <p>Horas totales: {{ response.totalHours}}</p>
+        <p>Horas normales: {{ response.normalHours}}</p>
+        <p>Horas nocturnas: {{ response.nightHours}}</p>
+        <p>Horas normales extras: {{ response.normalExtraHours}}</p>
+        <p>Horas nocturnas extras: {{ response.nightExtraHours}}</p>
+        <p>Horas dominicales: {{ response.dominicalExtraHours}}</p>
+        <p>Horas dominicales extras: {{ response.dominicalHours}}</p>
+    </div>
+</div>
